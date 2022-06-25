@@ -1,0 +1,13 @@
+
+#Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+#You may assume that each input would have exactly one solution, and you may not use the same element twice.def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+        diff=0
+        map1={}
+        for i in range(len(nums)):
+            diff=target-nums[i]
+            if diff in map1:
+                return [map1[diff],i]
+            else:
+                map1[nums[i]]=i
+        
